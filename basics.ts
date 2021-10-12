@@ -8,7 +8,7 @@ let age: number = 24;
 
 age = 12;
 
-let userName: string;
+let userName: string | string[];
 
 userName = "Max";
 
@@ -49,7 +49,11 @@ let people: {
 
 //  Type inference:
 //  If you immediately initialize a variable like this, TypeScript will realize it's a string!
-let course = "React - The Complete Guide";
+//let course = "React - The Complete Guide";
 
 //  Doesn't work, not a string.
 //course = 12341;
+
+//  Union types:
+let course: string | number = "React - The Complete Guide";
+course = 12341;
