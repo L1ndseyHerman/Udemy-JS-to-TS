@@ -16,6 +16,33 @@ let isInstructor: boolean;
 
 isInstructor = true;
 
-let hobbies: null;
+//let hobbies: null;
+//  Can't re-assign hobbies if null :(
 
-//  Can't re-assign hobbies now :(
+//  More complex types:
+let hobbies: string[];
+
+hobbies = ["Sports", "Cooking"];
+
+//  Huh, this isn't an interface, and yet it works somehow?
+//  Is it because "person" has the same name as "person"?
+let person: {
+  name: string;
+  age: number;
+};
+
+//  Works, same types as the declaration above it.
+person = {
+  name: "Max",
+  age: 32,
+};
+
+//  Doesn't work, dif type.
+/*person = {
+    isEmployee: true
+}*/
+
+let people: {
+  name: string;
+  age: number;
+}[];
