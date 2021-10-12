@@ -24,12 +24,14 @@ let hobbies: string[];
 
 hobbies = ["Sports", "Cooking"];
 
-//  Huh, this isn't an interface, and yet it works somehow?
-//  Is it because "person" has the same name as "person"?
-let person: {
+//  Type Alias:
+//  Looks sim to an Interface, what's the difference?
+type Person = {
   name: string;
   age: number;
 };
+
+let person: Person;
 
 //  Works, same types as the declaration above it.
 person = {
@@ -42,10 +44,7 @@ person = {
     isEmployee: true
 }*/
 
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 
 //  Type inference:
 //  If you immediately initialize a variable like this, TypeScript will realize it's a string!
