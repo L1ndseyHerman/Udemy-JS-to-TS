@@ -70,3 +70,34 @@ function add(a: number, b: number) {
 function printOutput(value: any) {
   console.log(value);
 }
+
+//  Generics:
+
+//  Generics require angle brackets "<>". Standard to use "T", but could be whatever.
+//  THE T'S DETERMINE THE TYPE BY LOOKING AT THE ARGUMENTS OF THE ARRAY VALUES!!!!
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+/*function insertAtBeginning(array: any[], value: any) {
+  const newArray = [value, ...array];
+  return newArray;
+}*/
+
+//  HOVERING OVER THIS GETS "NUMBER" NOW!!!! :D :D
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); //  [-1, 1, 2, 3]
+//  Gets an error, bec split() only works on strings.
+//updatedArray[0].split('');
+
+//  This also works, as long as the array elements have the same type as well as
+//  the other value, it'll work!
+const stringArray = insertAtBeginning(["a", "b", "c"], "d");
+//  YES!! This is what I struggled on for that programming knowledge test.
+//  They had JSON data that could be type number | null, and needed to
+//  replace some null with numbers, but it wouldn't let me.
+
+//  Here, want to do number things to the number array,
+//  but can't bec it's type any, and need to keep it type any, but still do number things.
