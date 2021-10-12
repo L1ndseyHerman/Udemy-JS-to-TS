@@ -46,3 +46,10 @@ let people: {
   name: string;
   age: number;
 }[];
+
+//  Type inference:
+//  If you immediately initialize a variable like this, TypeScript will realize it's a string!
+let course = "React - The Complete Guide";
+
+//  Doesn't work, not a string.
+//course = 12341;
