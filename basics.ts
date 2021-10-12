@@ -56,3 +56,17 @@ let people: Person[];
 //  Union types:
 let course: string | number = "React - The Complete Guide";
 course = 12341;
+
+//  Functions and types:
+
+//  Don't need to explicitely state the return type, TypeScript infers it.
+//function add(a: number, b: number): number {
+function add(a: number, b: number) {
+  return a + b;
+}
+
+//  console.log() works w any type, so this is a time when "any" is ok.
+//  This function has a return type of "void", so basically "undefined".
+function printOutput(value: any) {
+  console.log(value);
+}
